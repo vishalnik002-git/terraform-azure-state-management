@@ -1,0 +1,2 @@
+workload_resource_group_name = "rg-state-governance-dev"
+location                     = "eastus"

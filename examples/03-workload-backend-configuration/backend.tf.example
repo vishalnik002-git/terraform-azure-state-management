@@ -1,0 +1,14 @@
+# Example remote backend configuration for Azure Blob Storage
+# To use this in production with active credentials:
+# 1. Rename this file to backend.tf
+# 2. Fill in the values from your bootstrap deployment
+# 3. Run: terraform init
+
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "rg-terraform-tfstate"
+    storage_account_name = "sttfstatebootstrap01"
+    container_name       = "tfstate"
+    key                  = "production.workload.tfstate"
+  }
+}
